@@ -1,0 +1,34 @@
+Para o correto funcionamento deste código, é necessário algumas configurações antes de realizar os testes.
+1. Utilizando um ambiente virtual python, será necessário a instalações de alguns componentes:
+ pip install flask
+ pip install SQLAlchemy
+ pip install Flask-SQLAlchemy
+ pip install PyMySQL
+
+*são componentes para utilização do framework flash, que agiliza o processo de codificação em programas que contactam o banco de dados.
+
+Configuração do Banco de Dados:
+2. É necessário substituir as informações contidas na linha 8 do arquivo app.py de acordo com os dados de usuário, conexão e nome do banco
+do usuário.
+    <user>:<password>@<server>/<Database>
+2.1. O banco de dados necessariamente deve estar criado no ambiente MySQL.
+    CREATE DATABASE <Database>
+4. Dentro da pasta do Projeto, utilizando o cmd, entrar no console python e executar a seguinte ordem de comandos:
+   ->from app import db
+   ->db.create_all()
+* Esta configuração cria as tabelas no banco de dados ja criado no passo anterior
+
+Junto a este arquivo enviarei um arquivo postman com os requests já preparados para a utilização.
+
+Lista de propriedades: return lista de propriedades
+Criar propriedade: entrada json com os dados de propriedade
+Buscar propriedade: return propriedade; parametro id
+Atualizar propriedade: entrada json com os dados de propriedade; parametro id
+Deletar Propriedade: deleta propriedade; parametro id
+Propriedade por agencia: return propriedades de uma agencia; parametro id(agencia)
+Propriedade pela agencia: return propriedade por agencia; parametro id(agencia) e id(propriedade)
+Lista de agencias: return lista de agencias
+Criar agencias: entrada json com os dados de agencia
+Buscar agencias: return agencia; parametro id
+Atualizar agencia: entrada json com os dados de agencia; parametro id
+deletar agencias: deleta agencia; parametro id
